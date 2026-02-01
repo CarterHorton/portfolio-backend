@@ -1,0 +1,9 @@
+{% if latest_projectEntry_list %}
+    <ul>
+    {% for projects in latest_projectEntry_list %}
+        <li><a href="/journals/{{ projects.id }}/">{{ projects.project_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Projects are available.</p>
+{% endif %}
